@@ -1,35 +1,23 @@
-﻿// dweight2.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
-//
+﻿// dweight2.cpp 对应书上 S2.5 的 习题22
 
 #include <stdio.h>
 
-using namespace std;
+#define scanf scanf_s                  //替换scanf为scanf_s，因为在VS2019里使用scanf会报错。用DEVC++调试时将此行注释掉。
 
 int main()
 {
-    float a = 0, b = 0, c = 0;
-    double MV = 0.0f;
+    float a = 0.0f, b = 0.0f, c = 0.0f;
+    float MV = 0.0f;
 
-    printf("please enter the length:");
-    scanf_s("%f", &a);
-    printf("please enter the height:");
-    scanf_s("%f", &b);
-    printf("please enter the width:");
-    scanf_s("%f", &c);
+    printf("Please enter the length:"); //取长
+    scanf("%f", &a);
+    printf("Please enter the width:");  //取宽
+    scanf("%f", &b);
+    printf("Please enter the height:"); //取高
+    scanf("%f", &c);
 
     MV = (a * b * c) / 166;
 
-    printf("V=%.0f\n", a * b * c);
+    printf("\nV=%.0f\n", a * b * c);
     printf("Cost %.2f\n", MV);
 }
-
-// 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
-// 调试程序: F5 或调试 >“开始调试”菜单
-
-// 入门使用技巧: 
-//   1. 使用解决方案资源管理器窗口添加/管理文件
-//   2. 使用团队资源管理器窗口连接到源代码管理
-//   3. 使用输出窗口查看生成输出和其他消息
-//   4. 使用错误列表窗口查看错误
-//   5. 转到“项目”>“添加新项”以创建新的代码文件，或转到“项目”>“添加现有项”以将现有代码文件添加到项目
-//   6. 将来，若要再次打开此项目，请转到“文件”>“打开”>“项目”并选择 .sln 文件
