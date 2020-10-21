@@ -28,11 +28,11 @@ int main()
     
     for (int i = 0; i <= 10; i += 2)        //奇位求和
     {
-        sum1 = num[i];
+        sum1 += num[i];
     }
     for (int i = 1; i <= 9; i += 2)         //偶位求和
     {
-        sum2 = num[i];
+        sum2 += num[i];
     }
 
     num[11] = (sum1 * 3 + sum2 - 1) % 10;   //计算验证位
