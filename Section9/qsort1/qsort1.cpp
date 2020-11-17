@@ -56,7 +56,7 @@ int* quickSort_array_int(int a[], int L, int R)    //int快速排序函数
     
     a[i] = key;
 
-    printf_array_int(a, 20);
+    printf_array_int(a, 2048);
     
     quickSort_array_int(a, L, i - 1);//递归调用处理左侧
     quickSort_array_int(a, i + 1, R);//递归调用处理右侧
@@ -64,18 +64,18 @@ int* quickSort_array_int(int a[], int L, int R)    //int快速排序函数
 
 int main()
 {
-    int a[20];
+    int a[2048];
 
     srand((unsigned)time(NULL));
-    for (int i = 0; i < 20; i++) a[i] = rand();
+    for (int i = 0; i < 2048; i++) a[i] = rand();
 
-    for (int i = 0; i < 20; i++)
+    for (int i = 0; i < 2048; i++)
     {
         printf("%6d ", a[i]);
     }
     printf("\n");
     
-    printf_array_int(quickSort_array_int(a, 0, 20 - 1), 20);
+    printf_array_int(quickSort_array_int(a, 0, 2048 - 1), 2048);
 
     return 0;
 }
